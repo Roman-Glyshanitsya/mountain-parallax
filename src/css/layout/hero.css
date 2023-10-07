@@ -1,0 +1,314 @@
+/* =============== Hero ================= */
+.social-links {
+    writing-mode: vertical-rl;
+    display: flex;
+    align-items: center;
+
+    margin-right: 400px;
+}
+
+.social-links__text {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    margin-bottom: 25px;
+}
+
+.social-links__icon {
+    width: 24px;
+    height: 24px;
+    fill: #FFF;
+    cursor: pointer;
+
+}
+
+.social-links__icon:not(:last-child) {
+    margin-bottom: 25px;
+}
+
+.social-links__icon:hover,
+.social-links__icon:focus {
+    fill: #FBD784;
+    transition: fill 250ms ease-in-out;
+}
+
+/* wrapper */
+.wrapper {
+    min-height: 100%;
+}
+
+.parallax {
+    min-height: 100vh;
+}
+
+.parallax__body {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    padding-top: 150px;
+
+}
+
+.parallax__container {
+    position: relative;
+    z-index: 2;
+
+    display: flex;
+    align-items: center;
+    /* justify-content: space-between; */
+}
+
+
+.article__label {
+    color: #FBD784;
+    display: flex;
+    align-items: center;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    font-weight: 800;
+    letter-spacing: 6px;
+    text-transform: uppercase;
+    margin-bottom: 32px;
+}
+
+.article__label::before {
+    content: '';
+    margin-right: 32px;
+    background-color: #FBD784;
+    width: 72px;
+    height: 2px;
+}
+
+.parallax__title {
+    color: #FFF;
+    font-family: 'Playfair Display', serif;
+    font-size: 44px;
+    font-weight: 600;
+    line-height: 113.636%;
+    text-transform: capitalize;
+    margin-bottom: 30px;
+}
+
+.scroll-down__label {
+    display: flex;
+    align-items: center;
+}
+
+.scroll-down__text {
+    color: #FFF;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    padding-top: 25px;
+    margin-right: 16px;
+}
+
+
+.icon-scroll-down {
+    width: 16px;
+    height: 24px;
+    fill: currentColor;
+
+    animation-name: bounce;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+
+
+}
+
+@keyframes bounce {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(30px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.progress-bar {
+    position: fixed;
+    top: 20%;
+    right: 80px;
+    width: 65px;
+    height: 240px;
+    background-color: aqua;
+    z-index: 100;
+}
+
+/* ================ Parallax ============== */
+
+.parallax__images {
+    position: absolute;
+    width: 120%;
+    height: 120%;
+    top: -10%;
+    left: -10%;
+    z-index: 1;
+}
+
+.images-parallax::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(330deg, rgba(11, 29, 38, 0.00) 31.06%, #0B1D26 108.93%);
+    z-index: 10;
+}
+
+.images-parallax__item {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+
+.images-parallax__clouds,
+.images-parallax__mountains,
+.images-parallax__human,
+.images-parallax__front-clouds-01,
+.images-parallax__front-clouds-02 {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+}
+
+.images-parallax__clouds {
+    background: url("../img/hero/clouds.jpg") top / cover no-repeat;
+    top: 0;
+}
+
+.images-parallax__mountains {
+    background: url("../img/hero/mountains.png") top / cover no-repeat;
+    top: 15%;
+    z-index: 2;
+}
+
+.images-parallax__human {
+    background: url("../img/hero/human.png") top / cover no-repeat;
+    top: 45%;
+    z-index: 3;
+}
+
+
+
+
+/* ========== Front Clouds =================== */
+/* .images-parallax__hero-front-clouds {
+    background: url("../img/front-clouds/8.png") top / cover no-repeat;
+    top: 20%;
+    left: 30%;
+    z-index: 3;
+
+    position: fixed;
+    width: 100%;
+    height: 100%;
+
+    opacity: 0.7;
+
+    transform: rotate(-10deg);
+} */
+
+.images-parallax__front-clouds-01 {
+    background: url("../img/front-clouds/7.png") top / cover no-repeat;
+    top: 60%;
+    left: -30%;
+    z-index: 3;
+}
+
+.images-parallax__front-clouds-02 {
+    background: url("../img/front-clouds/8.png") top / contain no-repeat;
+    top: 90%;
+    left: 0;
+    z-index: 3;
+
+    position: absolute;
+    -webkit-animation: clouds 80s ease infinite;
+    animation: clouds 80s ease infinite;
+    z-index: 100;
+}
+
+@media (max-aspect-ratio: 3/2) {
+    .images-parallax__human {
+        background-position: 20% top;
+    }
+}
+
+/* Slide clouds */
+#overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    -webkit-user-select: none;
+    z-index: 10;
+}
+
+.front-slide-top-image {
+    position: absolute;
+    top: -10%;
+    left: 80%;
+    -webkit-animation: clouds 80s ease infinite;
+    animation: clouds 80s ease infinite;
+    z-index: 1;
+}
+
+.front-slide-bottom-image {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    -webkit-animation: clouds 80s ease infinite;
+    animation: clouds 80s ease infinite;
+    z-index: 100;
+}
+
+.clouds-delay {
+    right: -1200px;
+    -webkit-animation-delay: 20s;
+    animation-delay: 20s;
+}
+
+@-webkit-keyframes clouds {
+
+    0% {
+        -webkit-transform: translateX(0%);
+        transform: translateX(0%);
+    }
+
+    100% {
+        -webkit-transform: translateX(-100%);
+        transform: translateX(-100%);
+        opacity: 0.7;
+    }
+
+}
+
+@keyframes clouds {
+
+    0% {
+        -webkit-transform: translateX(0%);
+        transform: translateX(0%);
+    }
+
+    100% {
+        -webkit-transform: translateX(-100%);
+        transform: translateX(-100%);
+        opacity: 0.7;
+    }
+
+}

@@ -1,11 +1,11 @@
 {
-  "name": "vanilla-app-template",
+  "name": "mountain-parallax",
   "private": true,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build --base=/Vite_vanilla-app-template/",
+    "build": "vite build --base=/mountain-parallax/",
     "preview": "vite preview"
   },
   "devDependencies": {
