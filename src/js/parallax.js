@@ -1,15 +1,15 @@
-"use strict";
+'use strict';
 
 // Loading content
 window.onload = function () {
-  const parallax = document.querySelector("main");
+  const parallax = document.querySelector('main');
 
   if (parallax) {
-    const content = document.querySelector(".parallax__container");
-    const clouds = document.querySelector(".images-parallax__clouds");
-    const mountains = document.querySelector(".images-parallax__mountains");
-    const human = document.querySelector(".images-parallax__human");
-    // const overlay = document.getElementById("overlay");
+    const content = document.querySelector('.parallax__container');
+    const clouds = document.querySelector('.images-parallax__clouds');
+    const mountains = document.querySelector('.images-parallax__mountains');
+    const human = document.querySelector('.images-parallax__human');
+    const overlay = document.getElementById('overlay');
 
     // Коофшцієнти
     const forClouds = 40;
@@ -42,15 +42,15 @@ window.onload = function () {
       human.style.cssText = `transform: translate(${positionX / forHuman}%, ${
         positionY / forHuman
       }%);`;
-      // overlay.style.cssText = `transform: translate(${positionX / forHuman}%, ${
-      //   positionY / forHuman
-      // }%)`;
+      overlay.style.cssText = `transform: translate(${positionX / forHuman}%, ${
+        positionY / forHuman
+      }%)`;
 
       requestAnimationFrame(setMouseParallaxStyle);
     }
     setMouseParallaxStyle();
 
-    parallax.addEventListener("mousemove", function (e) {
+    parallax.addEventListener('mousemove', function (e) {
       //   Отримання ширини та висоти блока
       const parallaxWidth = parallax.offsetWidth;
       const parallaxHeight = parallax.offsetHeight;
@@ -77,7 +77,7 @@ window.onload = function () {
       threshold: thresholdSets,
     });
 
-    observer.observe(document.querySelector(".content"));
+    observer.observe(document.querySelector('.content'));
 
     function setParallaxItemsStyle(scrollTopProcent) {
       content.style.cssText = `transform: translate(0%, -${
@@ -89,9 +89,9 @@ window.onload = function () {
       human.parentElement.style.cssText = `transform: translate(0%, -${
         scrollTopProcent / 3
       }%);`;
-      // overlay.style.cssText = `transform: translate(0%, -${
-      //   scrollTopProcent / 3
-      // }%);`;
+      overlay.style.cssText = `transform: translate(0%, -${
+        scrollTopProcent / 3
+      }%);`;
     }
   }
 };
