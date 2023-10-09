@@ -12,9 +12,10 @@ window.onload = function () {
     const overlay = document.getElementById('overlay');
 
     // Коофшцієнти
-    const forClouds = 40;
-    const forMountains = 20;
-    const forHuman = 10;
+    const forClouds = 60;
+    const forMountains = 40;
+    const forHuman = 30;
+    const forOverlay = 20;
 
     // Швидкість анімації
     const speed = 0.1;
@@ -42,9 +43,9 @@ window.onload = function () {
       human.style.cssText = `transform: translate(${positionX / forHuman}%, ${
         positionY / forHuman
       }%);`;
-      overlay.style.cssText = `transform: translate(${positionX / forHuman}%, ${
-        positionY / forHuman
-      }%)`;
+      overlay.style.cssText = `transform: translate(${
+        positionX / forOverlay
+      }%, ${positionY / forOverlay}%)`;
 
       requestAnimationFrame(setMouseParallaxStyle);
     }
@@ -81,13 +82,13 @@ window.onload = function () {
 
     function setParallaxItemsStyle(scrollTopProcent) {
       content.style.cssText = `transform: translate(0%, -${
-        scrollTopProcent / 9
+        scrollTopProcent / 12
       }%);`;
       mountains.parentElement.style.cssText = `transform: translate(0%, -${
-        scrollTopProcent / 6
+        scrollTopProcent / 9
       }%);`;
       human.parentElement.style.cssText = `transform: translate(0%, -${
-        scrollTopProcent / 3
+        scrollTopProcent / 6
       }%);`;
       overlay.style.cssText = `transform: translate(0%, -${
         scrollTopProcent / 3
