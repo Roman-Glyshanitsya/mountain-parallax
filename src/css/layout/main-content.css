@@ -87,3 +87,23 @@
 .article__img {
     max-width: 450px;
 }
+
+/* ========== Front Clouds =================== */
+.images-parallax__front-clouds-01 {
+    background: url("../../img/front-clouds/7.png") top / cover no-repeat;
+    top: 60%;
+    left: -30%;
+    z-index: 3;
+}
+
+.images-parallax__front-clouds-02 {
+    background: url("../../img/front-clouds/8.png") top / contain no-repeat;
+    top: 90%;
+    left: 0;
+    z-index: 3;
+
+    position: absolute;
+    -webkit-animation: clouds 80s ease infinite;
+    animation: clouds 80s ease infinite;
+    z-index: 100;
+}

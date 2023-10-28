@@ -1,9 +1,40 @@
+.progress-bar {
+    position: fixed;
+    top: 30%;
+    right: 10%;
+    width: 65px;
+    height: 240px;
+    border: 2px solid #fff;
+    z-index: 100;
+}
+
 /* =============== Hero ================= */
+.parallax {
+    min-height: 100vh;
+}
+
+.parallax__body {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    padding-top: 150px;
+
+}
+
+.parallax__container {
+    position: relative;
+    z-index: 2;
+
+    display: flex;
+    align-items: center;
+}
+
 .social-links {
     writing-mode: vertical-rl;
     display: flex;
     align-items: center;
-
     margin-right: 400px;
 }
 
@@ -33,34 +64,6 @@
     fill: #FBD784;
     transition: fill 250ms ease-in-out;
 }
-
-/* wrapper */
-.wrapper {
-    min-height: 100%;
-}
-
-.parallax {
-    min-height: 100vh;
-}
-
-.parallax__body {
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    padding-top: 150px;
-
-}
-
-.parallax__container {
-    position: relative;
-    z-index: 2;
-
-    display: flex;
-    align-items: center;
-}
-
 
 .article__label {
     color: #FBD784;
@@ -134,15 +137,6 @@
     }
 }
 
-.progress-bar {
-    position: fixed;
-    top: 20%;
-    right: 80px;
-    width: 65px;
-    height: 240px;
-    background-color: aqua;
-    z-index: 100;
-}
 
 /* ================ Parallax ============== */
 
@@ -202,44 +196,6 @@
     z-index: 3;
 }
 
-
-
-
-/* ========== Front Clouds =================== */
-/* .images-parallax__hero-front-clouds {
-    background: url("../img/front-clouds/8.png") top / cover no-repeat;
-    top: 20%;
-    left: 30%;
-    z-index: 3;
-
-    position: fixed;
-    width: 100%;
-    height: 100%;
-
-    opacity: 0.7;
-
-    transform: rotate(-10deg);
-} */
-
-.images-parallax__front-clouds-01 {
-    background: url("../../img/front-clouds/7.png") top / cover no-repeat;
-    top: 60%;
-    left: -30%;
-    z-index: 3;
-}
-
-.images-parallax__front-clouds-02 {
-    background: url("../../img/front-clouds/8.png") top / contain no-repeat;
-    top: 90%;
-    left: 0;
-    z-index: 3;
-
-    position: absolute;
-    -webkit-animation: clouds 80s ease infinite;
-    animation: clouds 80s ease infinite;
-    z-index: 100;
-}
-
 @media (max-aspect-ratio: 3/2) {
     .images-parallax__human {
         background-position: 20% top;
@@ -254,7 +210,6 @@
     width: 100%;
     height: 100%;
     overflow: hidden;
-    -webkit-user-select: none;
     z-index: 10;
 }
 
@@ -273,13 +228,7 @@
     left: 50%;
     -webkit-animation: clouds 80s ease infinite;
     animation: clouds 80s ease infinite;
-    z-index: 100;
-}
-
-.clouds-delay {
-    right: -1200px;
-    -webkit-animation-delay: 20s;
-    animation-delay: 20s;
+    z-index: 1;
 }
 
 @-webkit-keyframes clouds {
