@@ -1,7 +1,7 @@
 .progress-bar {
     position: fixed;
     top: 30%;
-    right: 10%;
+    right: 5%;
     /* border: 2px solid #fff; */
     z-index: 100;
 }
@@ -15,7 +15,7 @@
 
 .progress-bar__link {
     position: relative;
-    font-size: 18px;
+    font-size: 16px;
     font-weight: 700;
     padding: 20px 0;
 }
@@ -88,7 +88,7 @@
     height: 24px;
     fill: #FFF;
     cursor: pointer;
-
+    transition: all 300ms cubic-bezier(0.4, 0, 0.2, 1)
 }
 
 .social-links__icon:not(:last-child) {
@@ -98,7 +98,8 @@
 .social-links__icon:hover,
 .social-links__icon:focus {
     fill: #FBD784;
-    transition: fill 250ms ease-in-out;
+    transform: scale(1.3);
+
 }
 
 .article__label {
@@ -110,7 +111,7 @@
     font-weight: 800;
     letter-spacing: 6px;
     text-transform: uppercase;
-    margin-bottom: 32px;
+    margin-top: 75px;
 }
 
 .article__label::before {
@@ -124,29 +125,28 @@
 .parallax__title {
     color: #FFF;
     font-family: 'Playfair Display', serif;
-    font-size: 44px;
+    font-size: 50px;
     font-weight: 600;
     line-height: 113.636%;
     text-transform: capitalize;
-    margin-bottom: 30px;
 }
 
-.scroll-down__label {
+/* .scroll-down__label {
     display: flex;
     align-items: center;
-}
+} */
 
-.scroll-down__text {
+/* .scroll-down__text {
     color: #FFF;
     font-family: 'Montserrat', sans-serif;
     font-size: 14px;
     font-weight: 700;
     padding-top: 25px;
     margin-right: 16px;
-}
+} */
 
 
-.icon-scroll-down {
+/* .icon-scroll-down {
     width: 16px;
     height: 24px;
     fill: currentColor;
@@ -157,9 +157,9 @@
     animation-iteration-count: infinite;
 
 
-}
+} */
 
-@keyframes bounce {
+/* @keyframes bounce {
     0% {
         transform: translateY(0);
     }
@@ -171,7 +171,7 @@
     100% {
         transform: translateY(0);
     }
-}
+} */
 
 
 /* ================ Parallax ============== */
@@ -251,7 +251,7 @@
 
 .front-slide-top-image {
     position: absolute;
-    top: -10%;
+    top: -15%;
     left: 80%;
     -webkit-animation: clouds 80s ease infinite;
     animation: clouds 80s ease infinite;
@@ -260,7 +260,7 @@
 
 .front-slide-bottom-image {
     position: absolute;
-    bottom: 0;
+    bottom: -5%;
     left: 50%;
     -webkit-animation: clouds 80s ease infinite;
     animation: clouds 80s ease infinite;
