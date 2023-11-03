@@ -22,12 +22,16 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 50px;
     padding-bottom: 150px;
 }
 
 .article__thumb:nth-child(2n) {
     flex-direction: row-reverse;
+}
+
+.article__thumb--content {
+    position: relative;
+    padding-left: 150px;
 }
 
 .article__number {
@@ -37,12 +41,8 @@
     font-weight: 700;
     line-height: 100%;
     opacity: 0.2;
-    top: -25%;
+    top: -5%;
     left: 2%;
-}
-
-.article__thumb--content {
-    position: relative;
 }
 
 .article__title {
@@ -80,8 +80,32 @@
     margin-left: 16px;
 }
 
+/* .article__link:hover .article__link__icon {
+    animation-name: bounce;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+@keyframes bounce {
+    0% {
+        transform: translateX(0);
+    }
+
+    50% {
+        transform: translateX(30px);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+} */
+
 .article__img {
     max-width: 450px;
+    margin-top: 25px;
+    border-radius: 15px;
+    box-shadow: 10px 10px 8px 2px rgba(0, 0, 0, 0.3);
 }
 
 /* ========== Front Clouds =================== */
