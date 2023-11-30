@@ -16,5 +16,8 @@
 <symbol id="icon-arrow_downward_24px" viewBox="0 0 21 32">
 <path d="M21.333 21.333l-1.88-1.88-7.453 7.44v-26.893h-2.667v26.893l-7.44-7.453-1.893 1.893 10.667 10.667 10.667-10.667z"></path>
 </symbol>
+<symbol id="icon-arrow_right_24px" viewBox="0 0 48 32">
+<path fill="#fbd784" style="fill: var(--color1, #fbd784)" d="M32 0l-2.82 2.82 11.16 11.18h-40.34v4h40.34l-11.18 11.16 2.84 2.84 16-16-16-16z"></path>
+</symbol>
 </defs>
 </svg>
