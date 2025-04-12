@@ -72,6 +72,7 @@
 }
 
 .article__link {
+    width: 130px;
     color: #FBD784;
     font-family: 'Montserrat', sans-serif;
     font-size: 14px;
