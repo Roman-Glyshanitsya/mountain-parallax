@@ -2,7 +2,6 @@
     position: fixed;
     top: 30%;
     right: 5%;
-    /* border: 2px solid #fff; */
     z-index: 100;
 }
 
@@ -130,49 +129,6 @@
     line-height: 113.636%;
     text-transform: capitalize;
 }
-
-/* .scroll-down__label {
-    display: flex;
-    align-items: center;
-} */
-
-/* .scroll-down__text {
-    color: #FFF;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 14px;
-    font-weight: 700;
-    padding-top: 25px;
-    margin-right: 16px;
-} */
-
-
-/* .icon-scroll-down {
-    width: 16px;
-    height: 24px;
-    fill: currentColor;
-
-    animation-name: bounce;
-    animation-duration: 2s;
-    animation-timing-function: linear;
-    animation-iteration-count: infinite;
-
-
-} */
-
-/* @keyframes bounce {
-    0% {
-        transform: translateY(0);
-    }
-
-    50% {
-        transform: translateY(30px);
-    }
-
-    100% {
-        transform: translateY(0);
-    }
-} */
-
 
 /* ================ Parallax ============== */
 
